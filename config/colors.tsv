@@ -1,0 +1,25 @@
+country	china	#511EA8
+country	hong_kong	#4928B4
+country	taiwan	#4334BF
+country	japan	#4063CF
+country	vietnam	#527CCE
+country	philippines	#528EB1
+country	new_zealand	#55AEB1
+country	sweden	#98BD5E
+country	netherlands	#00802b
+country	belgium	#003311
+country	france	#00cc00
+country	india	#d7e1f4
+country	canada	#DC2F24
+country	usa	#E1512A
+country	mexico	#E38336
+country	haiti	#D3B240
+country	tanzania	#6BB1BE
+
+region	china	#0000FF
+region	southeast_asia	#3399FF
+region	japan_korea	#339933
+region	oceania	#9933FF
+region	africa	#FFCC00
+region	europe	#FF0000
+region	north_america	#FF9933

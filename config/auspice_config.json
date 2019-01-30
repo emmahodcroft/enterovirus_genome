@@ -1,0 +1,44 @@
+{
+  "title": "Phylodynamics of Enterovirus D68",
+  "color_options": {
+    "gt": {
+      "menuItem": "genotype",
+      "legendTitle": "Genotype",
+      "type": "discrete",
+      "key": "genotype"
+    },
+    "age": {
+      "menuItem": "Host age",
+      "legendTitle": "Host Age (month)",
+      "type": "continuous",
+      "key": "age"
+    },
+    "num_date": {
+      "menuItem": "date",
+      "legendTitle": "Sampling date",
+      "type": "continuous",
+      "key": "num_date"
+    },
+    "country": {
+    },
+    "region": {
+      "type": "discrete"
+    },
+    "clade_membership":{
+      "menuItem": "Clade",
+      "legendTitle": "Clade",
+      "type": "discrete",
+      "key": "clade_membership"
+    }
+  },
+  "geo": [
+    "country"
+  ],
+  "maintainer": [
+    "Richard Neher, Robert Dyrdak",
+    "http://neherlab.org"
+  ],
+  "filters": [
+    "country"
+  ]
+}
