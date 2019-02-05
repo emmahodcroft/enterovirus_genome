@@ -86,6 +86,7 @@ rule download_seqs:
         print(input.meta)
         meta = pd.read_csv(input.meta, sep='\t')
         additional_meta = {}
+        tooShort = []
         with open(output.sequences, 'w') as fh:
             for ri, row in meta.iterrows():
                 try:
@@ -95,6 +96,10 @@ rule download_seqs:
                     continue
                 print(row.strain, row.accession)
                 rec = SeqIO.read(handle, 'genbank')
+                if len(rec.seq) - rec.seq.count("N") < 6400:
+                    print(row.strain, row.accession, "is too short when Ns removed!")
+                    tooShort.append(row.strain)
+                    continue
                 try:
                     authors = rec.annotations['references'][0].authors
                     title = rec.annotations['references'][0].title
@@ -112,6 +117,7 @@ rule download_seqs:
                 rec.description = ''
                 SeqIO.write(rec, fh, 'fasta')
 
+        print(len(tooShort), "sequences were too short after Ns were removed, and were excluded.")
         add_meta = pd.DataFrame(additional_meta).transpose()
         all_meta = pd.concat((meta, add_meta), axis=1)
         all_meta.to_csv(output.meta, sep='\t', index=False)

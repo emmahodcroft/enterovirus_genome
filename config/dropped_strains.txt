@@ -1,2 +1,3 @@
 37_99
 EVD68/Homo_sapiens/XXX/ATCC_VR_1197/XXXX
+EV-D68/Homosapiens/USA/C7738/2014
